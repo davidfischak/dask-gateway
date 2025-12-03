@@ -3,9 +3,7 @@ name: Build and Push Dask Gateway Server
 on:
   push:
     branches:
-      - metrics
-    paths:
-      - dask_gateway/**
+      - main
   workflow_dispatch:
 
 jobs:
@@ -38,7 +36,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./dask-gateway
           push: true
           tags: ghcr.io/${{ github.repository }}/dask-gateway-metrics:latest
-          file: dask_gateway/Dockerfile
+          file: Dockerfile
