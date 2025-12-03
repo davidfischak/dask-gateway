@@ -2,7 +2,7 @@
 # then we freeze them ahead of time to provide a clear description of the
 # dependencies we have installed.
 #
-prometheus-client
+#prometheus-client
 
 # Install dask-gateway-server[kubernetes], which is the only thing needed for
 # our CI test suite.
