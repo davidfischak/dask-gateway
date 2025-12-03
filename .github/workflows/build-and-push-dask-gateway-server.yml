@@ -38,7 +38,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./dask_gateway
+          context: .
           push: true
           tags: ghcr.io/${{ github.repository }}/dask-gateway-metrics:latest
           file: dask_gateway/Dockerfile
