@@ -7,3 +7,4 @@
 # our CI test suite.
 #
 .[kubernetes]
+prometheus_client
