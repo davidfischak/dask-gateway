@@ -18,7 +18,7 @@ jobs:
     name: Refreeze Dockerfile.requirements.txt
 
     # Don't run this job on forks
-    if: github.repository == 'dask/dask-gateway'
+    if: github.repository == 'davidfischak/dask-gateway'
     runs-on: ubuntu-24.04
 
     strategy:
