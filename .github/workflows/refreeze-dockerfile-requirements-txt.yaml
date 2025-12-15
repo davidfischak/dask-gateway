@@ -47,16 +47,16 @@ jobs:
         run: git --no-pager diff --color=always
 
       # ref: https://github.com/peter-evans/create-pull-request
-      - name: Create a PR
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: "${{ secrets.dask_bot_token }}"
-          author: Dask Bot Account <65357765+dask-bot@users.noreply.github.com>
-          committer: Dask Bot Account <65357765+dask-bot@users.noreply.github.com>
-          branch: update-image-${{ matrix.image }}
-          labels: dependencies
-          commit-message: Refreeze ${{ matrix.image}}/Dockerfile.requirements.txt
-          title: Refreeze ${{ matrix.image}}/Dockerfile.requirements.txt
-          body: >-
-            ${{ matrix.image}}/Dockerfile.requirements.txt has been refrozen
-            based on ${{ matrix.image}}/Dockerfile.requirements.in.
+      # - name: Create a PR
+      #   uses: peter-evans/create-pull-request@v7
+      #   with:
+      #     token: "${{ secrets.dask_bot_token }}"
+      #     author: Dask Bot Account <65357765+dask-bot@users.noreply.github.com>
+      #     committer: Dask Bot Account <65357765+dask-bot@users.noreply.github.com>
+      #     branch: update-image-${{ matrix.image }}
+      #     labels: dependencies
+      #     commit-message: Refreeze ${{ matrix.image}}/Dockerfile.requirements.txt
+      #     title: Refreeze ${{ matrix.image}}/Dockerfile.requirements.txt
+      #     body: >-
+      #       ${{ matrix.image}}/Dockerfile.requirements.txt has been refrozen
+      #       based on ${{ matrix.image}}/Dockerfile.requirements.in.
